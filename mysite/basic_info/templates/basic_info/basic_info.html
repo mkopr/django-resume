@@ -1,0 +1,21 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+    {% for info in object_list %}
+
+        <h3>{{ info.first_name }}</h3>
+        <h3>{{ info.last_name }}</h3>
+        <h3>{{ info.photo }}</h3>
+        <h3>{{ info.birth_date|date:"d-m-Y" }}</h3>
+        <h3>{{ info.city }}</h3>
+        <h3>{{ info.email }}</h3>
+        <h3>{{ info.phone_number }}</h3>
+        <h3>{{ info.url1 }}</h3>
+        <h3>{{ info.url2 }}</h3>
+        <h3>{{ info.url3 }}</h3>
+        <h3>{{ info.text }}</h3>
+
+    {% endfor %}
+
+{% endblock %}
