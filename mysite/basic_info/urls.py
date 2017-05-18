@@ -8,8 +8,11 @@ class BasicInfoDetailView(DetailView):
     # Source of html file
     template_name = 'basic_info/basic_info.html'
 
+
 # What we want to see in /basic-info
 urlpatterns = [
-    url(r'^(?P<pk>\d+)/$', BasicInfoDetailView.as_view(),
+    url(r'^(?P<pk>\d+)/$', BasicInfoDetailView.as_view(
+        queryset=BasicInfo.objects.all().order_by("-add_date")[:1]),
         name='basic-info-detail')
     ]
+

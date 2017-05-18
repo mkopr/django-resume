@@ -1,9 +1,10 @@
 {% extends "personal/header.html" %}
 
 {% block content %}
-
+    <h2>bla bla bla</h2>
+    {{ object_list }}
     {% for info in object_list %}
-
+        <p>{{ object_list }}</p>
         <h3>{{ info.first_name }}</h3>
         <h3>{{ info.last_name }}</h3>
         <h3>{{ info.photo }}</h3>
