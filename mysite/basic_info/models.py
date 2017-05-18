@@ -16,7 +16,7 @@ class BasicInfo(models.Model):
     url_2 = models.URLField()
     url_3 = models.URLField()
     text = models.TextField(max_length=250)
-    add_date = models.DateField(auto_now=True)
+    add_date = models.DateField()
 
 
     def __str__(self):
