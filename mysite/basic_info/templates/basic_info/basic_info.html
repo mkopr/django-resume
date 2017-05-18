@@ -1,22 +1,65 @@
 {% extends "personal/header.html" %}
 
 {% block content %}
-    <h2>bla bla bla</h2>
+
     {{ object_list }}
     {% for info in object_list %}
-        <p>{{ object_list }}</p>
-        <h3>{{ info.first_name }}</h3>
-        <h3>{{ info.last_name }}</h3>
-        <h3>{{ info.photo }}</h3>
-        <h3>{{ info.birth_date|date:"d-m-Y" }}</h3>
-        <h3>{{ info.city }}</h3>
-        <h3>{{ info.email }}</h3>
-        <h3>{{ info.phone_number }}</h3>
-        <h3>{{ info.url1 }}</h3>
-        <h3>{{ info.url2 }}</h3>
-        <h3>{{ info.url3 }}</h3>
-        <h3>{{ info.text }}</h3>
 
+    <div class="container">
+      <h2>Basic informations abut me</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>First name</b></td>
+            <td>{{ info.first_name }}</td>
+          </tr>
+          <tr class="active">
+            <td><b>Last name</b></td>
+            <td>{{ info.last_name }}</td>
+          </tr>
+          <tr>
+            <td><b>Birth date</b></td>
+            <td>{{ info.birth_date|date:"d-m-Y" }}</td>
+          </tr>
+          <tr class="active">
+            <td><b>City</b></td>
+            <td>{{ info.city }}</td>
+          </tr>
+              <tr>
+            <td><b>Email adress</b></td>
+            <td>{{ info.email }}</td>
+          </tr>
+          <tr class="active">
+            <td><b>Phone number</b></td>
+            <td>{{ info.phone_number }}</td>
+          </tr>
+              <tr>
+            <td><b>URL</b></td>
+            <td>{{ info.url1 }}</td>
+          </tr>
+          <tr class="active">
+            <td><b>URL</b></td>
+            <td>{{ info.url2 }}</td>
+          </tr>
+              <tr>
+            <td><b>URL</b></td>
+            <td>{{ info.url3 }}</td>
+          </tr>
+          <tr class="active">
+            <td><b>Other</b></td>
+            <td>{{ info.text }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {{ info.photo }}
     {% endfor %}
 
 {% endblock %}
