@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'basic_info',
     'experience',
     'academics',
+    'skills',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

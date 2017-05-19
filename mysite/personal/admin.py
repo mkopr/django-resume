@@ -1,3 +1,4 @@
 from django.contrib import admin
+from personal.models import WelcomeText
 
-# Register your models here.
+admin.site.register(WelcomeText)
