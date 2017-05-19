@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^experience/', include('experience.urls')),
     url(r'^academics/', include('academics.urls')),
     url(r'^skills/', include('skills.urls')),
+    url(r'^projects/', include('projects.urls')),
 
 ]
