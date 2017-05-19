@@ -11,141 +11,190 @@
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link href="https://fonts.googleapis.com/css?family=Farsan|Work+Sans" rel="stylesheet" type='text/css'>
-	<style type="text/css">
-	html,
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans|Montserrat|Lato"
+          rel="stylesheet" type='text/css'>
 
-	body {
-	  font-size: 100%;
-	  font-family: 'Work Sans', sans-serif;
-	  height:100%;
-	}
+<style>
+body {
+   font: 400 15px Lato, sans-serif;
+   line-height: 1.8;
+   color: #727272;
+}
 
-	/* Carousel Styling */
-	.slide1{
-	  background-image: url("{% static 'personal/img/background1.png' %}");
-	  height: 300px;
-	  background-repeat: no-repeat;
-	  background-position: center;
-	  background-size: cover;
-	}
-	.slide2{
-	  background-image: url("{% static 'personal/img/background2.png' %}");
-	  height: 300px;
-	  background-repeat: no-repeat;
-	  background-position: center;
-	  background-size: cover;
-	}
-	.slide3{
-	  background-image: url("{% static 'personal/img/background3.png' %}");
-	  height: 300px;
-	  background-repeat: no-repeat;
-	  background-position: center;
-	  background-size: cover;
-	}
-	.carousel-caption h1{
-	  font-size: 3.4em;
-	  font-family: 'Farsan', cursive;
-	  padding-bottom: .4em;
-	}
-	.carousel-caption p{
-	  font-size: 1em;
-	  font-family: 'Farsan', serif;
-	}
-	</style>
+h2 {
+   font-size: 24px;
+   text-transform: uppercase;
+   color: #4c4c4c;
+   font-weight: 600;
+   margin-bottom: 30px;
+   font-family: Lato, sans-serif;
+
+}
+
+h4 {
+   font-size: 19px;
+   line-height: 1.375em;
+   color: #4c4c4c;
+   font-weight: 400;
+   margin-bottom: 30px;
+   font-family: Work Sans, sans-serif;
+}
+
+.jumbotron {
+    background-color: #4286f4; /* Blue */
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #0048bc; /* Dark Blue */
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #0048bc !important; /* Dark Blue */
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0048bc !important; /* Dark Blue */
+}
+</style>
 </head>
 
-<body class="body" style="background-color:#e5e5e5">
-	<div class="container-fluid" style="min-height:95%; ">
+<body id="django-resume" data-spy="scroll" data-target=".navbar"
+      data-offset="60">
 
-
-<div id="theCarousel" class="carousel slide" data-ride="carousel">
-
-  <!-- Define how many slides to put in the carousel -->
-  <ol class="carousel-indicators">
-      <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
-      <li data-target="#theCarousel" data-slide-to="1"> </li>
-      <li data-target ="#theCarousel" data-slide-to="2"> </li>
-  </ol >
-
-  <!-- Define the text to place over the image -->
-  <div class="carousel-inner">
-      <div class="item active" >
-          <div class ="slide1"></div>
-          <div class="carousel-caption">
-              <h1>Welcome</h1>
-              <p>This is my resume website!</p>
-              <p><a href="#" class="btn btn-primary btn-sm">Text version <span
-                      class="caret"></span></a></p>
-          </div>
-      </div>
-      <div class="item">
-          <div class="slide2"></div>
-          <div class="carousel-caption">
-              <h1>Check my resume!</h1>
-              <p>Just scroll</p>
-          </div>
-      </div>
-      <div class="item">
-          <div class="slide3"></div>
-          <div class="carousel-caption">
-              <h1>Personal Django website</h1>
-              <p>My first Django project</p>
-          </div>
-      </div>
-  </div>
-    <!-- Set the actions to take when the arrows are clicked -->
-    <a class="left carousel-control" href="#theCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"> </span>
-    </a>
-    <a class="right carousel-control" href="#theCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-</div>
-
-        <center><nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">django-resume</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Basic informations </a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Experience</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-education"></span> Academics</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-king"></span> Skills</a></li>
-                </ul>
-                <button class="btn btn-danger navbar-btn"><span class="glyphicon glyphicon-sunglasses"></span> Projects </button>
-            </div>
-        </nav>
-        </center>
-
-        <div>
-            <center>
-                {% block content %}
-                {% endblock %}
-            </center>
-        </div>
-
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MK</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="home">Home</a></li>
+                    <li><a href="basic-info"><span class="glyphicon glyphicon-user"></span> Basic informations </a></li>
+                    <li><a href="experience"><span class="glyphicon glyphicon-briefcase"></span> Experience</a></li>
+                    <li><a href="academics"><span class="glyphicon glyphicon-education"></span> Academics</a></li>
+                    <li><a href="skills"><span class="glyphicon glyphicon-king"></span> Skills</a></li>
+                    <li><a href="projects"><span class="glyphicon glyphicon-sunglasses"></span> Projects </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</center>
+<div class="jumbotron text-center">
+    <h1>django-resume</h1>
+    <p>My curriculum vitae in django framework</p>
+</div>
+    <div id="home" class="container-fluid">
+        <h2> Home </h2>
+    </div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:90%">
+  </div>
+</div>
+<h4>
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+</h4>
+<hr>
 
-	<footer>
+<div id="basic-info" class="container-fluid">
+    <h2> Basic informations </h2>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:80%">
+  </div>
+</div>
+<h4>Basic text</h4>
+<hr>
 
-		<div class="container-fluid">
-			<hr>
-            <a href="#"><span class="glyphicon glyphicon-menu-up"></span></a>
-			<center>
-                <p>
-                    <span class="glyphicon glyphicon-envelope"></span><a href="mailto:marcinkoprek@protonmail.com" target="blank"> Mail </a>
-                    | <span class="glyphicon glyphicon-earphone"></span><a href="tel:+48579514187" target="blank"> Phone number </a>
-                    | <span class="glyphicon glyphicon-book"></span><a href="https://github.com/mkopr" target="blank"> Github </a>
-                    | <span class="glyphicon glyphicon-qrcode"></span><a href="https://keybase.io/mkopr" target="blank"> Keybase </a>
-                </p>
-            </center>
-		</div>
+<div id="experience" class="container-fluid">
+    <h2>Experience</h2>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+  </div>
+</div>
+<h4>Basic text</h4>
+<hr>
 
-	</footer>
+<div id="academics" class="container-fluid">
+    <h2>Academics</h2>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:60%">
+  </div>
+</div>
+<h4>Basic text</h4>
+<hr>
+
+<div id="skills" class="container-fluid">
+        <h2>Skills</h2>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:50%">
+  </div>
+</div>
+<h4>Basic text</h4>
+<hr>
+
+<div id="projects" class="container-fluid">
+    <h2>Projects</h2>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:40%">
+  </div>
+</div>
+<h4>Basic text</h4>
+<hr>
+
+        <footer class="container-fluid text-center">
+            <br>
+            <hr>
+            <a href="#home" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <p>
+                <span class="glyphicon glyphicon-envelope"></span><a href="mailto:marcinkoprek@protonmail.com" target="blank"> Mail </a>
+                | <span class="glyphicon glyphicon-earphone"></span><a href="tel:+48579514187" target="blank"> Phone number </a>
+                | <span class="glyphicon glyphicon-book"></span><a href="https://github.com/mkopr" target="blank"> Github </a>
+                | <span class="glyphicon glyphicon-qrcode"></span><a href="https://keybase.io/mkopr" target="blank"> Keybase </a>
+            </p>
+        </footer>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
-</body>
+    </body>
 </html>
