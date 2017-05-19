@@ -24,10 +24,10 @@ body {
 h2 {
    font-size: 24px;
    text-transform: uppercase;
-   color: #4c4c4c;
+   color: #fffff;
    font-weight: 600;
    margin-bottom: 30px;
-   font-family: Lato, sans-serif;
+   font-family: Montserrat, sans-serif;
 
 }
 
@@ -76,12 +76,15 @@ footer .glyphicon {
     margin-bottom: 20px;
     color: #0048bc !important; /* Dark Blue */
 }
+
+
 </style>
 </head>
 
 <body id="django-resume" data-spy="scroll" data-target=".navbar"
       data-offset="60">
 
+<!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -92,109 +95,362 @@ footer .glyphicon {
       </button>
       <a class="navbar-brand" href="#">MK</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="Navbar">
       <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="home">Home</a></li>
-                    <li><a href="basic-info"><span class="glyphicon glyphicon-user"></span> Basic informations </a></li>
-                    <li><a href="experience"><span class="glyphicon glyphicon-briefcase"></span> Experience</a></li>
-                    <li><a href="academics"><span class="glyphicon glyphicon-education"></span> Academics</a></li>
-                    <li><a href="skills"><span class="glyphicon glyphicon-king"></span> Skills</a></li>
-                    <li><a href="projects"><span class="glyphicon glyphicon-sunglasses"></span> Projects </a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#basic-info"><span class="glyphicon glyphicon-user"></span> Basic informations </a></li>
+                    <li><a href="#experience"><span class="glyphicon glyphicon-briefcase"></span> Experience</a></li>
+                    <li><a href="#academics"><span class="glyphicon glyphicon-education"></span> Academics</a></li>
+                    <li><a href="#skills"><span class="glyphicon glyphicon-king"></span> Skills</a></li>
+                    <li><a href="#projects"><span class="glyphicon glyphicon-sunglasses"></span> Projects </a></li>
       </ul>
     </div>
   </div>
 </nav>
-</center>
-<div class="jumbotron text-center">
+
+<!-- Head -->
+<div id="Head" class="jumbotron text-center">
     <h1>django-resume</h1>
     <p>My curriculum vitae in django framework</p>
 </div>
-    <div id="home" class="container-fluid">
-        <h2> Home </h2>
+
+<!-- Home -->
+<div id="home" class="container-fluid">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h2>Home</h2>
+        </div>
+        <div class="panel-body">
+            <div>
+                <h4>
+                    {% block content %}
+                    {% endblock %}
+                </h4>
+            </div>
+        </div>
     </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:90%">
-  </div>
 </div>
-<h4>
-<div>
-    {% block content %}
-    {% endblock %}
-</div>
-</h4>
-<hr>
 
+
+<!-- Basic informations -->
 <div id="basic-info" class="container-fluid">
-    <h2> Basic informations </h2>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Basic informations</h2>
+        </div>
+        <div class="panel-body">
+            <div>
+                <div class="container">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th> </th>
+                            <th> </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>First name</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>Second name</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>Birth date</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>City</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>Email</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>Phone number</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>URL</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>URL</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>URL</td>
+                            <td>input DB</td>
+                          </tr>
+                          <tr>
+                            <td>Info</td>
+                            <td>input DB</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:80%">
-  </div>
-</div>
-<h4>Basic text</h4>
-<hr>
 
+<!-- Experiense -->
 <div id="experience" class="container-fluid">
-    <h2>Experience</h2>
-</div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h2>Experience</h2>
+        </div>
+
+  <ul class="nav nav-tabs">
+    <li class="active">
+        <a data-toggle="tab" href="#Experience-delivery">
+        input name DB
+        </a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#Experience-law-office">
+            input name DB
+        </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Experience-delivery" class="tab-pane fade in active">
+      <h4>input name DB <small>MM-RRRR -> NOW</small></h4>
+        <dl class="dl-horizontal">
+        <dt>Position: </dt>
+        <dd> input DB</dd>
+        <dt>Responsibilities:</dt>
+        <dd> imput DB</dd>
+        </dl>
+    </div>
+    <div id="Experience-law-office" class="tab-pane fade">
+      <h4>input name DB <small>MM-RRRR -> MM-RRRR</small></h4>
+        <dl class="dl-horizontal">
+        <dt>Position: </dt>
+        <dd> input DB</dd>
+        <dt>Responsibilities:</dt>
+        <dd> imput DB</dd>
+        </dl>
+    </div>
   </div>
+    </div>
 </div>
-<h4>Basic text</h4>
-<hr>
 
 <div id="academics" class="container-fluid">
-    <h2>Academics</h2>
-</div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Academics</h2>
+        </div>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#Academics-UKSW"> input
+        name DB </a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Academics-UKSW" class="tab-pane fade in active">
+      <h4>input name DB <small>MM-RRRR ->MM - RRRR</small></h4>
+        <dl class="dl-horizontal">
+        <dt>Department: </dt>
+        <dd> input DB</dd>
+        <dt>Faculty:</dt>
+        <dd> input DB</dd>
+        <dt>Info:</dt>
+        <dd> imput DB</dd>
+        </dl>
+    </div>
+
   </div>
 </div>
-<h4>Basic text</h4>
-<hr>
+</div>
 
+<!-- Skills -->
 <div id="skills" class="container-fluid">
-        <h2>Skills</h2>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h2>Skills</h2>
+        </div>
+        <div class="panel-body">
+            <div class="container table-group">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                        <table class="table table-bordered table-hover span1">
+                            <thead>
+                            <tr>
+                                <th><strong>Technologies</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-hover span1">
+                            <thead>
+                            <tr>
+                                <th><strong>Frameworks</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-hover span1">
+                            <thead>
+                            <tr>
+                                <th><strong>Data Bases</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-hover span1">
+                            <thead>
+                            <tr>
+                                <th><strong>Tools</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-hover span1">
+                            <thead>
+                            <tr>
+                                <th><strong>Operating systems</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            <tr>
+                                <td>import DB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:50%">
-  </div>
-</div>
-<h4>Basic text</h4>
-<hr>
 
+<!-- Projects -->
 <div id="projects" class="container-fluid">
-    <h2>Projects</h2>
-</div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:40%">
-  </div>
-</div>
-<h4>Basic text</h4>
-<hr>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Projects</h2>
+        </div>
 
-        <footer class="container-fluid text-center">
-            <br>
-            <hr>
-            <a href="#home" title="To Top">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-            <p>
-                <span class="glyphicon glyphicon-envelope"></span><a href="mailto:marcinkoprek@protonmail.com" target="blank"> Mail </a>
-                | <span class="glyphicon glyphicon-earphone"></span><a href="tel:+48579514187" target="blank"> Phone number </a>
-                | <span class="glyphicon glyphicon-book"></span><a href="https://github.com/mkopr" target="blank"> Github </a>
-                | <span class="glyphicon glyphicon-qrcode"></span><a href="https://keybase.io/mkopr" target="blank"> Keybase </a>
-            </p>
-        </footer>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#Projects-morg">
+                    input name DB
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#Projects-resume">
+                    django-resume
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="Projects-morg" class="tab-pane fade in active">
+            <h4>input name DB <small> language, technology, technology</small></h4>
+                <dl class="dl-horizontal">
+                    <dt>Github: </dt>
+                    <dd> input DB</dd>
+                    <dt>Device:</dt>
+                    <dd> input DB</dd>
+                    <dt>Info:</dt>
+                    <dd> imput DB</dd>
+                </dl>
+        </div>
+            <div id="Projects-resume" class="tab-pane fade">
+            <h4>input name DB <small> language, technology, technology</small></h4>
+                <dl class="dl-horizontal">
+                    <dt>Github: </dt>
+                    <dd> input DB</dd>
+                    <dt>Device:</dt>
+                    <dd> input DB</dd>
+                    <dt>Info:</dt>
+                    <dd> imput DB</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
-    </body>
+<footer class="container-fluid text-center">
+    <br>
+    <hr>
+    <a href="#Head" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>
+        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:marcinkoprek@protonmail.com" target="blank"> Mail </a>
+        | <span class="glyphicon glyphicon-earphone"></span><a href="tel:+48579514187" target="blank"> Phone number </a>
+        | <span class="glyphicon glyphicon-book"></span><a href="https://github.com/mkopr" target="blank"> Github </a>
+        | <span class="glyphicon glyphicon-qrcode"></span><a href="https://keybase.io/mkopr" target="blank"> Keybase </a>
+    </p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+</body>
 </html>
