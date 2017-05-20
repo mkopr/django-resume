@@ -6,7 +6,7 @@ class BasicInfo(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     # Try ImageField
-    photo_url = models.CharField(max_length=50)
+    photo_url = models.CharField(max_length=250)
     birth_date = models.DateField()
     city = models.CharField(max_length=20)
     email = models.EmailField()
@@ -19,4 +19,4 @@ class BasicInfo(models.Model):
     add_date = models.DateField()
 
     def __str__(self):
-        return self.add_date
+        return self.first_name
