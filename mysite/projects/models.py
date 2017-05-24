@@ -9,7 +9,8 @@ class Projects(models.Model):
     logo_url = models.CharField(max_length=250)
     device = models.TextField()
     description = models.TextField()
-    add_date = models.DateField()
+    finish = models.BooleanField(default=False)
+    start_date = models.DateField()
 
     def __str__(self):
         return self.name
