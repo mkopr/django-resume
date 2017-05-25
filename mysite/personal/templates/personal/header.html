@@ -124,6 +124,10 @@ footer .glyphicon {
         </div>
         <div class="panel-body">
             <div>
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div>
                 <h4>
                     {{ welcome_text.text }}
                 </h4>
@@ -405,7 +409,7 @@ footer .glyphicon {
                     <dt>Finish:</dt>
                     <dd> {{ project_1.finish }} </dd>
                     <dt>Info:</dt>
-                    <dd> {{ project_1.description }} DB</dd>
+                    <dd> {{ project_1.description }} </dd>
                 </dl>
         </div>
             <div id="Project_2" class="tab-pane fade">
