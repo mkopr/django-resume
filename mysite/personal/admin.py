@@ -1,10 +1,7 @@
 from django.contrib import admin
-from personal.models import WelcomeText
-from personal.models import Academics
-from personal.models import BasicInfo
-from personal.models import Experience
-from personal.models import Projects
-from personal.models import Skills
+from .models import WelcomeText, Academics, BasicInfo, Experience, Projects, \
+    Skills
+
 
 
 

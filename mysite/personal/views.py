@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from personal.models import WelcomeText, Academics, BasicInfo, Experience, \
-    Projects, Skills
+from .models import WelcomeText, Academics, BasicInfo, Experience, Projects, \
+    Skills
 
 
 def index(request):
