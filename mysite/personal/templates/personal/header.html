@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
 	<title>Marcin Koprek Website</title>
@@ -123,8 +123,7 @@ footer .glyphicon {
         <div class="panel-body">
             <div>
                 <h4>
-                    {% block content %}
-                    {% endblock %}
+                    {{ welcome_text.text }}
                 </h4>
             </div>
         </div>
@@ -146,48 +145,59 @@ footer .glyphicon {
                         <tr>
                             <th> </th>
                             <th> </th>
+                            <th> </th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>First name</td>
-                            <td>input DB</td>
+                            <td><i>Personal information</i></td>
+                            <td><b>First name</b></td>
+                            <td> {{ basic_info.first_name }} </td>
                           </tr>
                           <tr>
-                            <td>Second name</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>Last name</b></td>
+                              <td> {{ basic_info.last_name }} </td>
                           </tr>
                           <tr>
-                            <td>Birth date</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>Birth date</b></td>
+                              <td> {{ basic_info.birth_date }} </td>
                           </tr>
                           <tr>
-                            <td>City</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>City</b></td>
+                              <td> {{ basic_info.city }} </td>
                           </tr>
                           <tr>
-                            <td>Email</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>Info</b></td>
+                              <td> {{ basic_info.text }} </td>
                           </tr>
                           <tr>
-                            <td>Phone number</td>
-                            <td>input DB</td>
+                              <td><i>Contact information</i></td>
+                              <td><b>Email</b></td>
+                              <td> {{ basic_info.email }} </td>
                           </tr>
                           <tr>
-                            <td>URL</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>Phone number</b></td>
+                              <td> {{ basic_info.phone_number }} </td>
                           </tr>
                           <tr>
-                            <td>URL</td>
-                            <td>input DB</td>
+                              <td><i>Websites</i></td>
+                              <td><b>URL</b></td>
+                              <td> {{ basic_info.url_1 }} </td>
                           </tr>
                           <tr>
-                            <td>URL</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>URL</b></td>
+                              <td> {{ basic_info.url_2 }} </td>
                           </tr>
                           <tr>
-                            <td>Info</td>
-                            <td>input DB</td>
+                              <td> </td>
+                              <td><b>URL</b></td>
+                              <td> {{ basic_info.url_3 }} </td>
                           </tr>
                         </tbody>
                     </table>
@@ -206,40 +216,48 @@ footer .glyphicon {
 
   <ul class="nav nav-tabs">
     <li class="active">
-        <a data-toggle="tab" href="#Experience-delivery">
-        input name DB
+        <a data-toggle="tab" href="#Experience_1">
+            {{ experience_1.company_name }}
         </a>
     </li>
     <li>
-        <a data-toggle="tab" href="#Experience-law-office">
-            input name DB
+        <a data-toggle="tab" href="#Experience_2">
+            {{ experience_2.company_name }}
         </a>
     </li>
   </ul>
 
   <div class="tab-content">
-    <div id="Experience-delivery" class="tab-pane fade in active">
-      <h4>input name DB <small>MM-RRRR -> NOW</small></h4>
+    <div id="Experience_1" class="tab-pane fade in active">
+        <blockquote>
+      <h4> {{ experience_1.company_name }} <small>
+          {{ experience_1.start_date }} -> NOW</small></h4>
+        </blockquote>
         <dl class="dl-horizontal">
         <dt>Position: </dt>
-        <dd> input DB</dd>
+        <dd> {{ experience_1.position }} </dd>
         <dt>Responsibilities:</dt>
-        <dd> imput DB</dd>
+        <dd> {{ experience_1.responsibilities }} </dd>
         </dl>
     </div>
-    <div id="Experience-law-office" class="tab-pane fade">
-      <h4>input name DB <small>MM-RRRR -> MM-RRRR</small></h4>
+    <div id="Experience_2" class="tab-pane fade">
+      <blockquote>
+        <h4> {{ experience_2.company_name }}
+          <small>{{ experience_2.start_date }}
+              -> {{ experience_2.end_date }}</small></h4>
+      </blockquote>
         <dl class="dl-horizontal">
         <dt>Position: </dt>
-        <dd> input DB</dd>
+        <dd> {{ experience_2.position }} </dd>
         <dt>Responsibilities:</dt>
-        <dd> imput DB</dd>
+        <dd> {{ experience_2.responsibilities }} </dd>
         </dl>
     </div>
   </div>
     </div>
 </div>
 
+<!-- Academics -->
 <div id="academics" class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -247,20 +265,24 @@ footer .glyphicon {
         </div>
 
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#Academics-UKSW"> input
-        name DB </a></li>
+    <li class="active"><a data-toggle="tab" href="academics1">
+        {{ academics.school_name }} </a></li>
   </ul>
 
   <div class="tab-content">
-    <div id="Academics-UKSW" class="tab-pane fade in active">
-      <h4>input name DB <small>MM-RRRR ->MM - RRRR</small></h4>
+    <div id="academics1" class="tab-pane fade in active">
+      <blockquote>
+        <h4> {{ academics.school_name }}
+          <small> {{ academics.start_date }} -> {{ academics.end_date }}
+          </small></h4>
+      </blockquote>
         <dl class="dl-horizontal">
         <dt>Department: </dt>
-        <dd> input DB</dd>
+        <dd> {{ academics.department }} </dd>
         <dt>Faculty:</dt>
-        <dd> input DB</dd>
+        <dd> {{ academics.faculty }} </dd>
         <dt>Info:</dt>
-        <dd> imput DB</dd>
+        <dd> {{ academics.description }} </dd>
         </dl>
     </div>
 
@@ -286,16 +308,7 @@ footer .glyphicon {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
+                                <td> {{ skills.technologies }} </td>
                             </tr>
                             </tbody>
                         </table>
@@ -307,16 +320,7 @@ footer .glyphicon {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
+                                <td> {{ skills.frameworks }} </td>
                             </tr>
                             </tbody>
                         </table>
@@ -328,16 +332,7 @@ footer .glyphicon {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
+                                <td> {{ skills.data_bases }} </td>
                             </tr>
                             </tbody>
                         </table>
@@ -349,16 +344,7 @@ footer .glyphicon {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
+                                <td> {{ skills.tools }} </td>
                             </tr>
                             </tbody>
                         </table>
@@ -370,16 +356,7 @@ footer .glyphicon {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
-                            </tr>
-                            <tr>
-                                <td>import DB</td>
+                                <td> {{ skills.operating_systems }} </td>
                             </tr>
                             </tbody>
                         </table>
@@ -399,41 +376,53 @@ footer .glyphicon {
 
         <ul class="nav nav-tabs">
             <li class="active">
-                <a data-toggle="tab" href="#Projects-morg">
-                    input name DB
+                <a data-toggle="tab" href="#Project_1">
+                    {{ project_1.name }}
                 </a>
             </li>
             <li>
-                <a data-toggle="tab" href="#Projects-resume">
-                    django-resume
+                <a data-toggle="tab" href="#Project_2">
+                     {{ project_2.name }}
                 </a>
             </li>
         </ul>
         <div class="tab-content">
-            <div id="Projects-morg" class="tab-pane fade in active">
-            <h4>input name DB <small> language, technology, technology</small></h4>
+            <div id="Project_1" class="tab-pane fade in active">
+            <blockquote>
+                <h4> {{ project_1.name }}<hr>
+                <small>
+                    <b>Language:</b>  {{ project_1.language }} <hr>
+                    <b>Technology:</b> {{ project_1.technologies }} <hr>
+                </small></h4>
+            </blockquote>
                 <dl class="dl-horizontal">
                     <dt>Github: </dt>
-                    <dd> input DB</dd>
+                    <dd> <a href=" {{ project_1.URL }} ">link</a> </dd>
                     <dt>Device:</dt>
-                    <dd> input DB</dd>
-                    <dt>Work:</dt>
-                    <dd> input DB</dd>
+                    <dd> {{ project_1.device }} </dd>
+                    <dt>Finish:</dt>
+                    <dd> {{ project_1.finish }} </dd>
                     <dt>Info:</dt>
-                    <dd> imput DB</dd>
+                    <dd> {{ project_1.description }} DB</dd>
                 </dl>
         </div>
-            <div id="Projects-resume" class="tab-pane fade">
-            <h4>input name DB <small> language, technology, technology</small></h4>
+            <div id="Project_2" class="tab-pane fade">
+            <blockquote>
+                <h4> {{ project_2.name }}<hr>
+                <small>
+                    <b>Language: </b>{{ project_2.language }} <hr>
+                    <b>Technology: </b>{{ project_2.technologies }}<hr>
+                </small></h4>
+            </blockquote>
                 <dl class="dl-horizontal">
                     <dt>Github: </dt>
-                    <dd> input DB</dd>
+                    <dd> <a href=" {{ project_2.URL }} ">link</a> </dd>
                     <dt>Device:</dt>
-                    <dd> input DB</dd>
-                    <dt>Work:</dt>
-                    <dd> input DB</dd>
+                    <dd> {{ project_2.device }} </dd>
+                    <dt>Finish:</dt>
+                    <dd> {{ project_2.finish }} </dd>
                     <dt>Info:</dt>
-                    <dd> imput DB</dd>
+                    <dd> {{ project_2.description }} </dd>
                 </dl>
             </div>
         </div>
