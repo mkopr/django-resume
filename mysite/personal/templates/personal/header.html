@@ -34,7 +34,16 @@ h2 {
 }
 
 h4 {
-   font-size: 19px;
+   font-size: 21px;
+   line-height: 1.375em;
+   color: #4c4c4c;
+   font-weight: 400;
+   margin-bottom: 30px;
+   font-family: Work Sans, sans-serif;
+}
+
+h5 {
+   font-size: 15px;
    line-height: 1.375em;
    color: #4c4c4c;
    font-weight: 400;
@@ -236,8 +245,14 @@ footer .glyphicon {
   <div class="tab-content">
     <div id="Experience_1" class="tab-pane fade in active">
         <blockquote>
-      <h4> {{ experience_1.company_name }} <small>
-          {{ experience_1.start_date }} -> NOW</small></h4>
+            <img src=" {{ experience_1.logo_url }} "
+              class="img-circle"
+              alt=" {{ experience_1.company_name }} "
+              align="right"
+              width="150"
+              height="150">
+            <h4> {{ experience_1.company_name }} </h4><hr>
+            <h5> {{ experience_1.start_date }} -> NOW </h5><hr>
         </blockquote>
         <dl class="dl-horizontal">
         <dt>Position: </dt>
@@ -248,9 +263,15 @@ footer .glyphicon {
     </div>
     <div id="Experience_2" class="tab-pane fade">
       <blockquote>
-        <h4> {{ experience_2.company_name }}
-          <small>{{ experience_2.start_date }}
-              -> {{ experience_2.end_date }}</small></h4>
+          <img src=" {{ experience_2.logo_url }} "
+              class="img-circle"
+              alt=" {{ experience_2.company_name }} "
+              align="right"
+              width="150"
+              height="150">
+          <h4> {{ experience_2.company_name }} </h4><hr>
+          <h5> {{ experience_2.start_date }}
+              -> {{ experience_2.end_date }} </h5><hr>
       </blockquote>
         <dl class="dl-horizontal">
         <dt>Position: </dt>
@@ -277,11 +298,16 @@ footer .glyphicon {
 
   <div class="tab-content">
     <div id="academics1" class="tab-pane fade in active">
-      <blockquote>
-        <h4> {{ academics.school_name }}
-          <small> {{ academics.start_date }} -> {{ academics.end_date }}
-          </small></h4>
-      </blockquote>
+     <blockquote>
+         <img src=" {{ academics.logo_url }} "
+              class="img-circle"
+              alt=" {{ academisc.school_name }} "
+              align="right"
+              width="150"
+              height="150">
+         <h4> {{ academics.school_name }} </h4><hr>
+         <h5> {{ academics.start_date }} -> {{ academics.end_date }} </h5><hr>
+        </h4></blockquote>
         <dl class="dl-horizontal">
         <dt>Department: </dt>
         <dd> {{ academics.department }} </dd>
@@ -395,11 +421,15 @@ footer .glyphicon {
         <div class="tab-content">
             <div id="Project_1" class="tab-pane fade in active">
             <blockquote>
-                <h4> {{ project_1.name }}<hr>
-                <small>
-                    <b>Language:</b>  {{ project_1.language }} <hr>
-                    <b>Technology:</b> {{ project_1.technologies }} <hr>
-                </small></h4>
+                <img src=" {{ project_1.logo_url }} "
+                     class="img-circle"
+                     alt=" {{ project_1.name }} "
+                     align="right"
+                     width="150"
+                     height="150">
+                <h4> {{ project_1.name }} </h4><hr>
+                <h5><b> Language: </b>  {{ project_1.language }} <hr>
+                    <b> Technology: </b> {{ project_1.technologies }} </h5><hr>
             </blockquote>
                 <dl class="dl-horizontal">
                     <dt>Github: </dt>
@@ -414,11 +444,15 @@ footer .glyphicon {
         </div>
             <div id="Project_2" class="tab-pane fade">
             <blockquote>
-                <h4> {{ project_2.name }}<hr>
-                <small>
-                    <b>Language: </b>{{ project_2.language }} <hr>
-                    <b>Technology: </b>{{ project_2.technologies }}<hr>
-                </small></h4>
+                <img src=" {{ project_2.logo_url }} "
+                     class="img-circle"
+                     alt=" {{ project_2.name }} "
+                     align="right"
+                     width="150"
+                     height="150">
+                <h4> {{ project_2.name }} </h4><hr>
+                <h5><b> Language: </b>{{ project_2.language }} <hr>
+                    <b> Technology: </b>{{ project_2.technologies }} </h5><hr>
             </blockquote>
                 <dl class="dl-horizontal">
                     <dt>Github: </dt>
