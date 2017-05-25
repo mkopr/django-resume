@@ -26,7 +26,7 @@ class BasicInfoAdmin(admin.ModelAdmin):
 
         ('Contact info', {'fields': ['email', 'phone_number']}),
 
-        ('Websites', {'fields': ['url_1', 'url_2', 'url_3']})
+        ('Websites', {'fields': ['github', 'keybase', 'url_3', 'pdf_url']})
     ]
 
 

@@ -32,10 +32,12 @@ class BasicInfo(models.Model):
     email = models.EmailField()
     # f.ex. 0048 000 000 000
     phone_number = models.IntegerField()
-    url_1 = models.URLField(null=True, blank=True)
-    url_2 = models.URLField(null=True, blank=True)
+    github = models.URLField(null=True, blank=True)
+    keybase = models.URLField(null=True, blank=True)
     url_3 = models.URLField(null=True, blank=True)
     text = models.TextField(max_length=250, null=True, blank=True)
+    pdf_url = models.TextField(default='link from cloud or drive',
+                               max_length=250, null=True, blank=True)
 
     def __str__(self):
         return self.first_name

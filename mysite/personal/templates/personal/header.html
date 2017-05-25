@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
-	<title>Marcin Koprek Website</title>
+	<title> {{ basic_info.first_name }} {{ basic_info.last_name }} Website
+    </title>
 	<meta charset="utf-8" />
+
 	<!-- Make website fully responsible -->
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	{% load staticfiles %}
@@ -186,13 +188,13 @@ footer .glyphicon {
                           </tr>
                           <tr>
                               <td><i>Websites</i></td>
-                              <td><b>URL</b></td>
-                              <td> {{ basic_info.url_1 }} </td>
+                              <td><b>Github:</b></td>
+                              <td> {{ basic_info.github }} </td>
                           </tr>
                           <tr>
                               <td> </td>
-                              <td><b>URL</b></td>
-                              <td> {{ basic_info.url_2 }} </td>
+                              <td><b>Keybase</b></td>
+                              <td> {{ basic_info.keybase }} </td>
                           </tr>
                           <tr>
                               <td> </td>
@@ -436,11 +438,17 @@ footer .glyphicon {
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
     <p>
-        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:marcinkoprek@protonmail.com" target="blank"> Mail </a>
-        | <span class="glyphicon glyphicon-earphone"></span><a href="tel:+48579514187" target="blank"> Phone number </a>
-        | <span class="glyphicon glyphicon-book"></span><a href="https://github.com/mkopr" target="blank"> Github </a>
-        | <span class="glyphicon glyphicon-qrcode"></span><a href="https://keybase.io/mkopr" target="blank"> Keybase </a>
-        | <span class="glyphicon glyphicon-file"></span><a href="https://drive.google.com/file/d/0B1ZyEb_dlAhXc3Buby15OWNhb1E/view?usp=sharing" target="blank"> PDF Version </a>
+        <span class="glyphicon glyphicon-envelope"></span><a
+            href="mailto: {{ basic_info.email }}" target="blank"> Mail </a>
+        | <span class="glyphicon glyphicon-earphone"></span><a
+            href="tel: {{ basic_info.phone_number }}" target="blank"> Phone
+        number </a>
+        | <span class="glyphicon glyphicon-book"></span><a
+            href=" {{ basic_info.github }}" target="blank"> Github </a>
+        | <span class="glyphicon glyphicon-qrcode"></span><a
+            href=" {{ basic_info.keybase }}" target="blank"> Keybase </a>
+        | <span class="glyphicon glyphicon-file"></span><a
+            href=" {{ basic_info.pdf_url }}" target="blank"> PDF Version </a>
     </p>
 </footer>
 
