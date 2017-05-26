@@ -201,13 +201,14 @@ footer .glyphicon {
                           </tr>
                           <tr>
                               <td><i>Websites</i></td>
-                              <td><b>Github:</b></td>
-                              <td> {{ basic_info.github }} </td>
+                              <td><b>Github nickname:</b></td>
+                              <td><a
+                                      href=" https://github.com/{{ basic_info.github_login }}" target="blank">{{ basic_info.github_login }}</a></td>
                           </tr>
                           <tr>
                               <td> </td>
-                              <td><b>Keybase</b></td>
-                              <td> {{ basic_info.keybase }} </td>
+                              <td><b>Keybase nickname</b></td>
+                              <td><a href=" https://keybase.io/{{ basic_info.keybase_login }}" target="blank"> {{ basic_info.keybase_login }} </a></td>
                           </tr>
                           <tr>
                               <td> </td>
@@ -301,7 +302,7 @@ footer .glyphicon {
      <blockquote>
          <img src=" {{ academics.logo_url }} "
               class="img-circle"
-              alt=" {{ academisc.school_name }} "
+              alt=" {{ academics.school_name }} "
               align="right"
               width="150"
               height="150">
@@ -482,9 +483,11 @@ footer .glyphicon {
             href="tel: {{ basic_info.phone_number }}" target="blank"> Phone
         number </a>
         | <span class="glyphicon glyphicon-book"></span><a
-            href=" {{ basic_info.github }}" target="blank"> Github </a>
+            href=" https://github.com/{{ basic_info.github_login }}"
+            target="blank"> Github </a>
         | <span class="glyphicon glyphicon-qrcode"></span><a
-            href=" {{ basic_info.keybase }}" target="blank"> Keybase </a>
+            href=" https://keybase.io/{{ basic_info.keybase_login }}"
+            target="blank"> Keybase </a>
         | <span class="glyphicon glyphicon-file"></span><a
             href=" {{ basic_info.pdf_url }}" target="blank"> PDF Version </a>
     </p>

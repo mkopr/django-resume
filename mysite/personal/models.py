@@ -32,8 +32,8 @@ class BasicInfo(models.Model):
     email = models.EmailField()
     # f.ex. 0048 000 000 000
     phone_number = models.IntegerField()
-    github = models.URLField(null=True, blank=True)
-    keybase = models.URLField(null=True, blank=True)
+    github_login = models.TextField(null=True, blank=True)
+    keybase_login = models.TextField(null=True, blank=True)
     url_3 = models.URLField(null=True, blank=True)
     text = models.TextField(max_length=250, null=True, blank=True)
     pdf_url = models.TextField(default='link from cloud or drive',
