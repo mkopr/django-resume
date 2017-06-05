@@ -104,17 +104,38 @@ footer .glyphicon {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">MK</a>
     </div>
     <div class="collapse navbar-collapse" id="Navbar">
-      <ul class="nav navbar-nav navbar-right">
+      <!-- Links from navbar-->
+      <ul class="nav navbar-nav navbar-left">
                     <li><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                     <li><a href="#basic-info"><span class="glyphicon glyphicon-user"></span> Basic informations </a></li>
                     <li><a href="#experience"><span class="glyphicon glyphicon-briefcase"></span> Experience</a></li>
                     <li><a href="#academics"><span class="glyphicon glyphicon-education"></span> Academics</a></li>
                     <li><a href="#skills"><span class="glyphicon glyphicon-king"></span> Skills</a></li>
                     <li><a href="#projects"><span class="glyphicon glyphicon-sunglasses"></span> Projects </a></li>
-      </ul>
+          </ul>
+
+        <!-- Buttons from navbar with modals-->
+        <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="btn btn-info btn-xs navbar-btn"
+                    data-toggle="modal" data-target=".bs-example-modal-sm">
+                Github API
+            </button>
+
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <p>Login:</p>
+                        <p>Name:</p>
+                        <p>Repos:</p>
+                        <p>Account created at</p>
+                        <p>URL:</p>
+                    </div>
+                </div>
+            </div>
+
+        </ul>
     </div>
   </div>
 </nav>

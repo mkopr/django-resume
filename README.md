@@ -3,27 +3,36 @@
 
 django-resume
 =============
-> My curriculum vitae in django framework
+> Curriculum vitae in django framework
 
 
-Personal website with:
+Personal website with
 ----------------------
 - Basic informations
 - Experience
 - Academics
 - Skills
 - Projects
+- Github API
+    - This take your login from data base and show info from Github after 
+    press button <kbd>Github API</kbd>
+
+
+> **IMPORTANT** 
+> Put your own data in <i class="icon-cog"></i> /admin/personal/basicinfo to
+ see all powers of this project. 
 
 
 Required
 --------
-Module                                                     | Version
--------                                                    |--------
-[Django framework](https://www.djangoproject.com/)         |_1.11.1_
+Module                                                          | Version
+-------                                                         |--------
+[Django framework](https://www.djangoproject.com/)              |_1.11.1_
+[Requests](http://docs.python-requests.org/)                    |_2.16.5_
+[dateutil](http://dateutil.readthedocs.io)                      |_2.6.0_
 
-
-Used technologies:
+Used technologies
 ------------------
-- [bootstrap](https://getbootstrap.com/)
-- [google fonts](https://fonts.google.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Google fonts](https://fonts.google.com/)
  
