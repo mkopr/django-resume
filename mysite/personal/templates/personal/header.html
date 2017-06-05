@@ -123,13 +123,59 @@ footer .glyphicon {
                 Github API
             </button>
 
-            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
-                    <div class="modal-content">
-                        <div>
-                            {% block content %}
-                            {% endblock %}
-                        </div>
+            <div class="modal fade bs-example-modal-sm" tabindex="-1"
+                 role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog" role="document">
+                    <ul class="modal-content">
+                    <br>
+                        <p><b>Login:</b> {{ github_user.login }} |
+                        <b>by </b> {{ github_user.user_name }} |
+                        <b>Repos</b> <span class="badge">
+                            {{ github_user.repo_count }}</span></p>
+                        <p><b>Account created at</b><small>
+                            {{ github_user.account_created_at }}</small></p>
+                        <p><b>URL:</b> <a href="
+                        {{ github_user.account_url }}" target="blank">
+                            {{ github_user.account_url }}</a></p>
+                        <hr>
+
+                        <p><b>Repo name:</b> {{github_repo_1.name }}</p>
+                        <p><i> {{ github_repo_1.description }} </i></p>
+                        <p><a href="
+                            {{ github_repo_1.html_url }}">
+                            html link</a> |
+                            <a href="
+                            {{ github_repo_1.clone_url }}">
+                            clone link</a></p>
+                        <ul>
+                            <li><p><b> Created at</b><small>
+                                {{ github_repo_1.created_at }}</small></p></li>
+                            <li><p><b> Updated at</b><small>
+                                {{ github_repo_1.updated_at }}</small></p></li>
+                            <li><p><b> Language:</b>
+                                {{ github_repo_1.language }}</p></li>
+                        </ul>
+
+                            <hr>
+                        <p><b>Repo name:</b> {{github_repo_2.name }}</p>
+                        <p><i> {{ github_repo_2.description }} </i></p>
+                        <p><a href="
+                            {{ github_repo_2.html_url }}">
+                            html link</a> |
+                            <a href="
+                            {{ github_repo_2.clone_url }}">
+                            clone link</a></p>
+                        <ul>
+                            <li><p><b> Created at</b><small>
+                                {{ github_repo_2.created_at }}</small></p></li>
+                            <li><p><b> Updated at</b><small>
+                                {{ github_repo_2.updated_at }}</small></p></li>
+                            <li><p><b> Language:</b>
+                                {{ github_repo_2.language }}</p></li>
+                        </ul>
+                        <br>
+                        </ul>
+
                     </div>
                 </div>
             </div>
