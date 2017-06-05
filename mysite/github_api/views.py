@@ -39,20 +39,3 @@ def get_github_data(request, github_login):
             repo.save()
 
     return HttpResponse(status=200)
-
-
-def index(request):
-    data_html = 'github_api/data.html'
-    github_user = GithubUser.objects.last()
-    github_repo_1 = GithubRepo.objects.get(id=1)
-    github_repo_2 = GithubRepo.objects.get(id=2)
-
-    return render(
-        request=request,
-        template_name=data_html,
-        context={
-            'github_user': github_user,
-            'github_repo_1': github_repo_1,
-            'github_repo_2': github_repo_2,
-        }
-    )

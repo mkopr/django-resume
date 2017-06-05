@@ -17,8 +17,7 @@ def index(request):
 
     # Take date about github from data base
     github_user = GithubUser.objects.last()
-    github_repo_1 = GithubRepo.objects.get(id=1)
-    github_repo_2 = GithubRepo.objects.get(id=2)
+    github_repo = GithubRepo.objects.all()
 
     return render(
         request=request,
@@ -35,7 +34,6 @@ def index(request):
 
             # Take date about github from data base
             'github_user': github_user,
-            'github_repo_1': github_repo_1,
-            'github_repo_2': github_repo_2,
+            'github_repo': github_repo,
         },
     )
