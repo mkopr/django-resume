@@ -126,11 +126,10 @@ footer .glyphicon {
             <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
                 <div class="modal-dialog modal-sm" role="document">
                     <div class="modal-content">
-                        <p>Login:</p>
-                        <p>Name:</p>
-                        <p>Repos:</p>
-                        <p>Account created at</p>
-                        <p>URL:</p>
+                        <div>
+                            {% block content %}
+                            {% endblock %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,10 +152,8 @@ footer .glyphicon {
             <h2>Home</h2>
         </div>
         <div class="panel-body">
-            <div>
-                {% block content %}
-                {% endblock %}
-            </div>
+            <em>For full potentiality of this project please put data in
+            <mark>/admin/personal/basicinfo/</mark></em>
             <div>
                 <h4>
                     {{ welcome_text.text }}

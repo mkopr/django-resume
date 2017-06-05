@@ -13,7 +13,7 @@ def get_github_data(request, github_login):
         user = GithubUser(
             login=user_data['login'],
             avatar_url=user_data['avatar_url'],
-            user_data=user_data['user_name'],
+            user_name=user_data['user_name'],
             repo_count=len(user_data['repos']),
             account_created_at=user_data['account_created_at'],
             account_url=user_data['account_url'],
@@ -32,7 +32,7 @@ def get_github_data(request, github_login):
                 updated_at=(
                     dateutil.parser.parse(repository_data['updated_at'])
                 ),
-                laguage=repository_data['language'],
+                language=repository_data['language'],
                 user=user,
             )
             repo.save()

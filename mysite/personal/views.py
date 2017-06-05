@@ -4,7 +4,7 @@ from .models import WelcomeText, Academics, BasicInfo, Experience, Projects, \
 
 
 def index(request):
-    personal_html = 'personal/home.html'
+    personal_html = 'personal/header.html'
     welcome_text = WelcomeText.objects.first()
     academics = Academics.objects.first()
     basic_info = BasicInfo.objects.get(first_name='Marcin')
