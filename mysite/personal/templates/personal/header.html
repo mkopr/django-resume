@@ -120,7 +120,8 @@ footer .glyphicon {
         <ul class="nav navbar-nav navbar-right">
             <button type="button" class="btn btn-info btn-xs navbar-btn"
                     data-toggle="modal" data-target=".bs-example-modal-sm">
-                Github API
+                Github API | <a target="_blank" href="/github/{{ basic_info.github_login }}">
+                    Refresh</a>
             </button>
 
             <div class="modal fade bs-example-modal-sm" tabindex="-1"
@@ -158,15 +159,14 @@ footer .glyphicon {
                         </ul>
                         {% endfor %}
                         <br>
-                        </ul>
-
-                    </div>
+                    </ul>
                 </div>
             </div>
-
         </ul>
     </div>
+
   </div>
+    </div>
 </nav>
 
 <!-- Head -->
