@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'personal',
     'github_api',
+    'keybase_api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
