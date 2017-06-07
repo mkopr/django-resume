@@ -11,7 +11,7 @@ def get_keybase_data(request, keybase_login):
         user_data = request_keybase_user(keybase_login)
         user = KeybaseKey(
             login=user_data['login'],
-            publick_key=user_data['pgp_key'],
+            public_key=user_data['public_key'],
         )
         user.save()
 

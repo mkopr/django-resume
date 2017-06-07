@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import WelcomeText, Academics, BasicInfo, Experience, Projects, \
     Skills
 from github_api.models import GithubUser, GithubRepo
+from keybase_api.models import KeybaseKey
 
 
 def index(request):
@@ -19,6 +20,9 @@ def index(request):
     github_user = GithubUser.objects.last()
     github_repo = GithubRepo.objects.all()
 
+    # Take data about keybase from data base
+    keybase = KeybaseKey.objects.last()
+
     return render(
         request=request,
         template_name=personal_html,
@@ -35,5 +39,8 @@ def index(request):
             # Take date about github from data base
             'github_user': github_user,
             'github_repo': github_repo,
+
+            # Take data about keybase from data base
+            'keybase': keybase,
         },
     )
