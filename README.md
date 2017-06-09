@@ -19,7 +19,7 @@ Personal website with
 - Keybase API
     - This take your login from data base and show info from Keybase after 
     press button <kbd>Keybase API</kbd>
-
+- Changed name of admin section in _mysite/templates/admin/base_site.html_
 
 > **IMPORTANT** 
 > Put your own data in <i class="icon-cog"></i> /admin/personal/basicinfo to
